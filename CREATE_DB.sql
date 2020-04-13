@@ -1,0 +1,15 @@
+CREATE SCHEMA IF NOT EXISTS `pswdb` DEFAULT CHARACTER SET utf8;
+USE `pswdb`;
+DROP TABLE IF EXISTS `pswdb`.`user`;
+
+CREATE TABLE IF NOT EXISTS `pswdb`.`user`(
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(100) NOT NULL,
+	`last_name` VARCHAR(100) NOT NULL,
+	`login` VARCHAR(100) NOT NULL,
+	`password` VARCHAR(1000) NOT NULL,
+	`e-mail` VARCHAR(255) NOT NULL,
+	`permission` VARCHAR(10) NOT NULL,
+	`registration_date` DATE NOT NULL,
+	PRIMARY KEY (`id`)
+);
